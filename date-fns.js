@@ -3,9 +3,11 @@
 
 //2. gerekli metodları import et
 import { differenceInDays, formatDistanceToNow, format } from "date-fns";
+
+//3. gerekli ise dil ayarlarını dat-fns/locale'deb import et.
 import { tr } from "date-fns/locale";
 
-//3. kullanımı
+//4. kullanımı
 formatDistanceToNow(date, { addSuffix: true, locale: tr }); //3 gün sonra
 
 differenceInDays(sonrakiTarih, oncekiTarih); // 5
