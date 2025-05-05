@@ -40,10 +40,10 @@ const {
 
 //5. hata mesajlarını göster
 /*
-{ errors.name && 
+{ errors.firstName && 
  (
     <div className="form-error"> 
-        { errors.name.message }  
+        { errors.firstName.message }  
     </div>
   )  
 }
