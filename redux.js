@@ -14,7 +14,7 @@ import { reducer } from "./reducers/index.js";
 
 export const store = createStore(reducer);
 
-//4. uygulamayı provider ile sarmala
+//4. uygulamayı provider ile sarmala -> main.jsx
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 
@@ -49,8 +49,8 @@ const Home = (props) => {
   //...
 };
 
-//7. Birden fazla reducer varsa combineReducers ile birleştir
-import { combineReducers, legacy_createStore as createStore } from "redux";
+//7. Birden fazla reducer varsa combineReducers ile reducers/index.js'de birleştir.
+import { combineReducers } from "redux";
 
 import { userReducer } from "./reducers/userReducer.js";
 import { paymentReducer } from "./reducers/paymentReducer.js";
@@ -64,7 +64,6 @@ export const reducers = combineReducers({
   main: mainReducer,
 });
 
-export const myStore = createStore(reducers);
-
-//not combine reducer ile title almak için
+//not combine reducer ile reducerları birleştirdik. artık ortak bir state var. tüm reducer'lardaki state'leri içeriyor.
+//title artık state'deki main property'sinin içinde. yukarıda(reducers'da) öyle tanımladık.
 const title = useSelector((store) => store.main.title);

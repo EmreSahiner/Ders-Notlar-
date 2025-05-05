@@ -1,10 +1,10 @@
 //1. action type constant yaratılır
-export const artir = "artır";
+export const ARTIR = "artır";
 
 //2. action creator function yaratılır
 export const artirFunc = (value) => {
   return {
-    type: artir,
+    type: ARTIR,
     payload: value,
   };
 };

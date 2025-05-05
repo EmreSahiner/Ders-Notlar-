@@ -1,10 +1,10 @@
 //1. action type constant'ları import et
-import { artir } from "../actions/movieActions";
+import { ARTIR } from "../actions/movieActions";
 
-//2. reducer fonksiyonunu yaz
-export const reducer = (state, action) => {
+//2. reducer fonksiyonunu yaz (initialState için state'e default parametre tanımlamayı unutma!)
+export const reducer = (state = 0, action) => {
   switch (action.type) {
-    case artir:
+    case ARTIR:
       return state + action.payload;
     default:
       return state;
