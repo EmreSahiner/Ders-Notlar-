@@ -1,16 +1,16 @@
 //1. folder yapısını ayarla
 ///contexts klasörü oluştur
-// içine context dostasıı oluştur: settingsContext.jsx
+// içine context dosyasını oluştur: SettingsContext.jsx
 
 //2. createContext ile context oluştur. export etmeyi unutma!
-export const settingsContext = createContext();
+export const SettingsContext = createContext();
 
 //3. Provider component'i oluştur.
 //children'ı props'dan destruct et.
 //context'in Provider'ına children olarak ver.
 export const SettingsContextProvider = ({ children }) => {
   return (
-    <settingsContext.Provider value={{}}>{children}</settingsContext.Provider>
+    <SettingsContext.Provider value={{}}>{children}</SettingsContext.Provider>
   );
 };
 
@@ -58,7 +58,7 @@ export const SettingsContextProvider = (props) => {
 
 //5. uygulamayı main.jsx'de provider component'i ile sarmala
 import App from "./App.jsx";
-import { SettingsContextProvider } from "./contexts/settingsContext.jsx";
+import { SettingsContextProvider } from "./contexts/SettingsContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <SettingsContextProvider>
