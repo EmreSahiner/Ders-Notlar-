@@ -28,3 +28,7 @@ const state = [
   { id: 2, name: "Superman" },
 ];
 state = movieReducer(state, { type: "film çıkar", payload: 1 });
+
+const [state, dispatch] = useReducer(movieReducer, initialState);
+
+dispatch(action);
